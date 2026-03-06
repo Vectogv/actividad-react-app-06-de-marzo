@@ -1,0 +1,82 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: blanco;
+  padding: 15px;
+  position: relative;
+}
+
+.logo {
+  margin: 0;
+}
+
+
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+
+.hamburguesa {
+  display: none; 
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburguesa span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+
+.hamburguesa.abierto span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguesa.abierto span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguesa.abierto span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .menu.abierto {
+    display: flex;
+  }
+}
