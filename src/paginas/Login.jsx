@@ -4,24 +4,15 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    console.log("Correo:", email);
-    console.log("Contraseña:", password);
-
-    setEmail("");
-    setPassword("");
-  };
+  console.log("email",email);
+  console.log("password",password);
 
   return (
     <div className="container">
 
       <h2>Login</h2>
-
-      <form onSubmit={handleSubmit}>
-
+      
+      <form>
         <input
           type="email"
           placeholder="Correo electrónico"

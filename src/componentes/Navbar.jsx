@@ -20,7 +20,7 @@ function Navbar() {
 
       <div className={`menu ${abierto ? "abierto" : ""}`}>
         <Link to="/login" onClick={() => setAbierto(false)}>Iniciar sesión</Link>
-        <Link to="/formulario" onClick={() => setAbierto(false)}>Registro</Link>
+        <Link to="/Registro" onClick={() => setAbierto(false)}>Registro</Link>
         <Link to="/usuarios" onClick={() => setAbierto(false)}>Usuarios</Link>
       </div>
     </nav>
